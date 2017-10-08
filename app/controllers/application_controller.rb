@@ -18,6 +18,7 @@ class ApplicationController < Sinatra::Base
     session[:user_id] = @user.id
     redirect to '/account'
   end
+  end
 
   get '/account' do
     if Helpers.is_logged_in?(session)
